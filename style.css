@@ -80,7 +80,11 @@ h1{
     grid-template-rows: 50px 400px;
     grid-template-columns: 300px 300px 100px 100px ;
     grid-template-areas: "  .      .    . area2   "
-                         "  area1      area3  .  ."
+                         "  area1      area3  .  .";
+    height:100vh;
+    padding-top: 0px;
+    margin-top: 0px;
+    height: 100vh;
                          
                         
                          
@@ -121,8 +125,8 @@ h1{
     grid-template-areas: "project-tiles    profile" ; 
  
 }
-.project-tile  {        
-    
+.project-tile  {  
+    padding-right:0px;      
     display: inline-grid;
     grid-template-rows:50% 50%;
     grid-template-columns: 30% 30% 30%;
@@ -131,8 +135,11 @@ h1{
 }
 .project-image{
    padding:20px;
-   margin: 20px; 
+   margin-top: 20px;
+   margin-right: 80px;
+   margin-left: 40px; 
    border:1px solid black;
+   
 }
 #project-links{
    color:black;
@@ -140,4 +147,47 @@ h1{
    display: flex;
    flex-direction: column;
    line-height: 3;
+}
+
+#profile{
+   margin:20px;
+   box-sizing: border-box;
+   
+   background-image: url(Photos/background.jpg);
+   background-clip: border;
+}
+ .profile-link{
+  position:relative;
+  display: inline-block;
+  top : 50%;
+  left:30px;
+}
+
+@media (max-width: 720px){
+html{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+}
+#welcome-photo-bounceInUp{
+width: 200px;
+height:200px;
+left:50px;
+
+}
+#greeting{
+text-align: center;
+position:relative;
+width: 100%;
+left:200px ;
+}
+#projects{
+display: flex;
+flex-direction: column;
+overflow: auto;
+}
+#profile{
+width: 100%;
+height:100%;
+}
 }
